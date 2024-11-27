@@ -1,0 +1,103 @@
+.user-profile-form-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+.user-profile-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+  font-weight: 700;
+}
+
+.user-profile-form,
+.profile-display {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-profile-form input,
+.user-profile-form textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-profile-form input:focus,
+.user-profile-form textarea:focus {
+  border-color: #0073e6;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 115, 230, 0.2);
+}
+
+.user-profile-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.user-profile-form button,
+.profile-display button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0073e6;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-profile-form button:hover,
+.profile-display button:hover {
+  background-color: #005bb5;
+}
+
+.user-profile-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.profile-display p {
+  font-size: 1.1em;
+}
+
+.profile-display a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.profile-display a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .user-profile-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .user-profile-form input,
+  .user-profile-form textarea {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .user-profile-form textarea {
+    flex: 1 1 100%;
+  }
+
+  .user-profile-form button {
+    flex: 1 1 100%;
+  }
+}
